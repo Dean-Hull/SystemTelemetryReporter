@@ -1,6 +1,6 @@
-namespace SystemTelemetryReporter.Telemetry.Constants
+namespace SystemTelemetryReporter.Telemetry.Constants.PerformanceCounters
 {
-    internal static class PerformanceCounterConstants
+    internal static class Memory
     {
         public const string COMMITTED_BYTES = "Committed Bytes";
         public const string AVAILABLE_BYTES = "Available Bytes";
@@ -11,15 +11,31 @@ namespace SystemTelemetryReporter.Telemetry.Constants
         public const string POOL_NONPAGED_BYTES = "Pool Nonpaged Bytes";
         public const string PAGES_PER_SECOND = "Pages/sec";
         public const string PAGE_FAULTS_PER_SECOND = "Page Faults/sec";
+    }
+
+    internal static class Processor
+    {
         public const string PROCESSOR_TIME_PERCENT = "% Processor Time";
         public const string PROCESSOR_USER_TIME_PERCENT = "% User Time";
         public const string PROCESSOR_FREQUENCY = "Processor Frequency";
+    }
+
+    internal static class System
+    {
         public const string SYSTEM_PROCESSES = "Processes";
         public const string SYSTEM_UPTIME = "System Up Time";
         public const string CONTEXT_SWITCHES_PER_SECOND = "Context Switches/sec";
         public const string PROCESS_QUEUE_LENGTH = "Processor Queue Length";
+    }
+
+    internal static class Process
+    {
         public const string THREAD_COUNT = "Thread Count";
         public const string HANDLES = "Handle Count";
+    }
+
+    internal static class LogicalDisk
+    {
         public const string DISK_TIME_PERCENT = "% Disk Time";
         public const string DISK_READ_TIME_PERCENT = "% Disk Read Time";
         public const string DISK_WRITE_TIME_PERCENT = "% Disk Write Time";

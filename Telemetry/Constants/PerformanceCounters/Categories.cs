@@ -1,6 +1,6 @@
 namespace SystemTelemetryReporter.Telemetry.Constants
 {
-    internal static class PerformanceCounterCategories
+    internal static class Categories
     {
         public const string MEMORY = "Memory";
         public const string PROCESSOR = "Processor";
