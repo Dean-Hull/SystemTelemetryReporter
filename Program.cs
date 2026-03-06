@@ -1,5 +1,7 @@
 ﻿using Microsoft.Azure.Devices.Client;
 using SystemTelemetryReporter.Identity;
+using SystemTelemetryReporter.Telemetry;
+using SystemTelemetryReporter.Telemetry.Constants.PerformanceCounters;
 
 internal class Program
 {
@@ -28,5 +30,7 @@ internal class Program
 
         Console.WriteLine("Device client created successfully.");
         Console.WriteLine($"Reporting telemetry every {TELEMETRY_REPORT_INTERVAL_MINUTES} minutes...");
+
+        List<PerformanceCounterDefinition> counters = TelemetryService.GetPerformanceCounters();
     }
 }

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Diagnostics;
 using SystemTelemetryReporter.Telemetry.Constants;
 using SystemTelemetryReporter.Telemetry.Constants.PerformanceCounters;
 
@@ -5,6 +7,8 @@ namespace SystemTelemetryReporter.Telemetry
 {
     internal class TelemetryService
     {
+        private static List<PerformanceCounter>? _counters = [];
+
         public static List<PerformanceCounterDefinition> GetPerformanceCounters()
         {
             return
@@ -49,6 +53,22 @@ namespace SystemTelemetryReporter.Telemetry
                 new(Categories.LOGICAL_DISK, LogicalDiskConstants.FREE_SPACE_PERCENT, "_Total"),
                 new(Categories.LOGICAL_DISK, LogicalDiskConstants.FREE_MEGA_BYTES, "_Total")
             ];
+        }
+
+        public static void Initialise(IEnumerable<PerformanceCounterDefinition> definitions)
+        {
+            if (definitions == null) return;
+
+            _counters = [];
+
+            foreach (PerformanceCounterDefinition definition in definitions)
+            {
+                var counter = string.IsNullOrWhiteSpace(definition.Instance) 
+                ? new PerformanceCounter(definition.Category, definition.Counter) 
+                : new PerformanceCounter(definition.Category, definition.Counter, definition.Instance);
+                counter.NextValue();
+                _counters.Add(counter); 
+            }
         }
     }
 }
