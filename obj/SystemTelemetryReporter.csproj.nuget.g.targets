@@ -2,6 +2,5 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)system.text.json\6.0.10\buildTransitive\netcoreapp3.1\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.10\buildTransitive\netcoreapp3.1\System.Text.Json.targets')" />
-    <Import Project="$(NuGetPackageRoot)system.diagnostics.performancecounter\11.0.0-preview.1.26104.118\buildTransitive\netcoreapp2.0\System.Diagnostics.PerformanceCounter.targets" Condition="Exists('$(NuGetPackageRoot)system.diagnostics.performancecounter\11.0.0-preview.1.26104.118\buildTransitive\netcoreapp2.0\System.Diagnostics.PerformanceCounter.targets')" />
   </ImportGroup>
 </Project>
