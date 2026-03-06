@@ -544,6 +544,22 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.Diagnostics.PerformanceCounter/11.0.0-preview.1.26104.118": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/System.Diagnostics.PerformanceCounter.targets": {}
+        }
+      },
       "System.Diagnostics.TraceSource/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1786,6 +1802,37 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Diagnostics.PerformanceCounter/11.0.0-preview.1.26104.118": {
+      "sha512": "djtPms8ntTqxX/pSL0rnlbR76Z0NfExNsv9u3bPGFxqNDPo7uAITgPCuS1if82Q7imPjCh5EqjVaiKnlg/q5TQ==",
+      "type": "package",
+      "path": "system.diagnostics.performancecounter/11.0.0-preview.1.26104.118",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net10.0/_._",
+        "buildTransitive/net461/System.Diagnostics.PerformanceCounter.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.PerformanceCounter.targets",
+        "lib/net10.0/System.Diagnostics.PerformanceCounter.dll",
+        "lib/net10.0/System.Diagnostics.PerformanceCounter.xml",
+        "lib/net11.0/System.Diagnostics.PerformanceCounter.dll",
+        "lib/net11.0/System.Diagnostics.PerformanceCounter.xml",
+        "lib/net462/System.Diagnostics.PerformanceCounter.dll",
+        "lib/net462/System.Diagnostics.PerformanceCounter.xml",
+        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll",
+        "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.xml",
+        "runtimes/win/lib/net10.0/System.Diagnostics.PerformanceCounter.dll",
+        "runtimes/win/lib/net10.0/System.Diagnostics.PerformanceCounter.xml",
+        "runtimes/win/lib/net11.0/System.Diagnostics.PerformanceCounter.dll",
+        "runtimes/win/lib/net11.0/System.Diagnostics.PerformanceCounter.xml",
+        "system.diagnostics.performancecounter.11.0.0-preview.1.26104.118.nupkg.sha512",
+        "system.diagnostics.performancecounter.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Diagnostics.TraceSource/4.3.0": {
       "sha512": "VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
       "type": "package",
@@ -2917,7 +2964,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.Azure.Devices >= 1.41.0",
-      "Microsoft.Azure.Devices.Client >= 1.42.3"
+      "Microsoft.Azure.Devices.Client >= 1.42.3",
+      "System.Diagnostics.PerformanceCounter >= 11.0.0-preview.1.26104.118"
     ]
   },
   "packageFolders": {
@@ -2971,6 +3019,10 @@
           "Microsoft.Azure.Devices.Client": {
             "target": "Package",
             "version": "[1.42.3, )"
+          },
+          "System.Diagnostics.PerformanceCounter": {
+            "target": "Package",
+            "version": "[11.0.0-preview.1.26104.118, )"
           }
         },
         "imports": [

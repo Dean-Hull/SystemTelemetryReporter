@@ -32,5 +32,6 @@ internal class Program
         Console.WriteLine($"Reporting telemetry every {TELEMETRY_REPORT_INTERVAL_MINUTES} minutes...");
 
         List<PerformanceCounterDefinition> counters = TelemetryService.GetPerformanceCounters();
+        TelemetryService.Initialise(counters);
     }
 }
