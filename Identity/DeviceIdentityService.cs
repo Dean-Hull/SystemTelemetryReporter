@@ -1,4 +1,3 @@
-using System.Data;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Common.Exceptions;
 
