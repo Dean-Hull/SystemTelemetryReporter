@@ -5,5 +5,6 @@ namespace SystemTelemetryReporter.Telemetry.Constants.PerformanceCounters
         public string Category { get; set; } = category;
         public string Counter { get; set; } = counter;
         public string? Instance { get; set; } = instance;
+        public double Value { get; set; }
     }
 }
